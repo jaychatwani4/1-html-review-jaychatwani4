@@ -42,3 +42,8 @@ input {
 nav {
     background-color: gray;
 }
+
+.cite {
+    color: white;
+    font-size: small;
+}
