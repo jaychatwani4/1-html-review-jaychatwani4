@@ -1,0 +1,49 @@
+img {
+    border-radius: 50%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    border: 1.2px solid black;
+    padding: 10px;
+}
+
+body {
+    background-color: #93D4FB;
+}
+
+header {
+    background-color: #2744A2;
+    text-align: center;
+    font-size: 30px;
+}
+
+input {
+    width: 30%;
+}
+
+.em {
+    color: yellow;
+}
+
+#h {
+    color: teal;
+}
+
+.source {
+    color: slategrey;
+}
+
+nav {
+    background-color: gray;
+}
+
+.cite {
+    color: white;
+    font-size: small;
+}
