@@ -50,7 +50,6 @@ nav {
 
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
-    color: brown;
 }
 
 th[role=columnheader]:not(.no-sort):after {
@@ -59,9 +58,8 @@ th[role=columnheader]:not(.no-sort):after {
 	margin-top: 7px;
 	border-width: 0 4px 4px;
 	border-style: solid;
-    border-color: brown;
-    color: brown;
-	opacity: 0.5;
+	border-color: red;
+	opacity: 0.7;
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -71,17 +69,14 @@ th[role=columnheader]:not(.no-sort):after {
 th[aria-sort=ascending]:not(.no-sort):after {
 	border-bottom: none;
 	border-width: 4px 4px 0;
-    color: brown;
 }
 
 th[aria-sort]:not(.no-sort):after {
 	visibility: visible;
 	opacity: 0.4;
-    color: brown;
 }
 
 th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
-    color: brown;
 }
