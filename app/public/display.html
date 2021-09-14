@@ -29,7 +29,7 @@
               </div>
             </div>
           </nav>
-          <table class="table table-primary table-striped"">
+          <table class="table table-primary table-striped" id="tb">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -84,27 +84,27 @@
             <h3 id="h">Add New Book</h3>  
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" >
+              <input type="text" id="title" >
             </div>
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
-              <input type="text" class="form-control" id="autho">
+              <input type="text" id="autho">
             </div>
             <div class="mb-3">
               <label for="yearpublished" class="form-label">Year Published</label>
-              <input type="text" class="form-control" id="yearpublished">
+              <input type="text" id="yearpublished">
             </div>
             <div class="mb-3">
               <label for="publisher" class="form-label">Publisher</label>
-              <input type="text" class="form-control" id="publisher">
+              <input type="text" id="publisher">
             </div>
             <div class="mb-3">
               <label for="pagecount" class="form-label">Page Count</label>
-              <input type="text" class="form-control" id="pagecount">
+              <input type="text" id="pagecount">
             </div>
             <div class="mb-3">
               <label for="msrp" class="form-label">MSRP</label>
-              <input type="text" class="form-control" id="msrp">
+              <input type="text" id="msrp">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -118,4 +118,8 @@
             </a>
          </footer>
     </body>
+    <script src='js/tablesort.min.js'></script>
+        <script>
+          new Tablesort(document.getElementById('tb'));
+        </script>
 </html>
