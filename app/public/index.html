@@ -5,6 +5,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src='js/tablesort.min.js'></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   </head>
   <body>
     <header>
@@ -30,22 +32,20 @@
         </div>
       </div>
     </nav>
-    <div>
-      <center> 
+    <div id="someApp" >
       <a href="https://soundcloud.com/liverpool-for-life-342382914">
-        <img src="img/prison-mike.jpg" alt="Prison Mike" width="200" height="200">
+        <img v-bind:src="person.picture.large" alt="Prison Mike" width="200" height="200">
       </a>
       <p class="cite"><a href="https://soundcloud.com/liverpool-for-life-342382914">Source</a></p>
-    <p>
-      <h3 id="h">About Me</h3>
-      <b >Name: </b>Prison Mike<br>
-      <b>Nationality: </b>American<br>
-      <b>Date of Birth: </b>March 5th, 1960<br>
-      <b>Age: </b>51<br>
-      <b>Email: </b><a class="em" href="mailto:prisonmike@dundermifflin.com">prisonmike@dundermifflin.com</a><br>
-    </p>
-  </center>
-  </div>
+      <p>
+        <h3 id="h">About Me</h3>
+        <b >Name: </b>{{person.name.first}}<br>
+        <b>Country: </b>{{person.location.country}}<br>
+        <b>Date of Birth: </b> {{prettyBirthday}} <br>
+        <b>Age: </b>{{person.dob.age}}<br>
+        <b>Email: </b><a v-bind:href="'mailto:'+ person.email">{{person.email }}</a><br>
+      </p>
+    </div>
     <footer> 
       <a href="https://twitter.com/mindykaling/status/499028573504946176/photo/1">
         <img src="img/greatscott.jpg" alt="Great Scott" width="100" height="100">
@@ -55,5 +55,6 @@
           <img src="img/greatscott.jpg" alt="Great Scott" width="100" height="100">
       </a>
    </footer>
+   <script src="js/index.js"></script>
   </body>
 </html>

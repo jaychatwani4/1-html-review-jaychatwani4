@@ -80,3 +80,8 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+
+#someApp {
+    display: flex;
+    justify-content: center;
+}
