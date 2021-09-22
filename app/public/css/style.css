@@ -82,6 +82,10 @@ th[role=columnheader]:not(.no-sort):hover:after {
 }
 
 #someApp {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+}
+
+.sm {
+    background-color: darkblue;
+    color: black;
 }

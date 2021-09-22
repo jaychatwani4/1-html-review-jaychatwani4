@@ -32,10 +32,11 @@
         </div>
       </div>
     </nav>
-    <div id="someApp" >
+    <div id="someApp" class="d-flex align-items-center">
+      <center>
       <a href="https://soundcloud.com/liverpool-for-life-342382914">
         <img v-bind:src="person.picture.large" alt="Prison Mike" width="200" height="200">
-      </a>
+      </a><br>
       <p class="cite"><a href="https://soundcloud.com/liverpool-for-life-342382914">Source</a></p>
       <p>
         <h3 id="h">About Me</h3>
@@ -45,6 +46,11 @@
         <b>Age: </b>{{person.dob.age}}<br>
         <b>Email: </b><a v-bind:href="'mailto:'+ person.email">{{person.email }}</a><br>
       </p>
+      <form v-on:submit.prevent="fetchUserData">
+        <button type="submit" class="sm">Refresh</button>
+      </form>
+      <br>
+      </center>
     </div>
     <footer> 
       <a href="https://twitter.com/mindykaling/status/499028573504946176/photo/1">
