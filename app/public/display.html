@@ -4,6 +4,8 @@
         <title>My Page Title</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://unpkg.com/vue@next"></script>
+        <!-- <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> -->
     </head>
     <body>
         <header>
@@ -29,57 +31,32 @@
               </div>
             </div>
           </nav>
-          <table class="table table-primary table-striped" id="tb">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Author</th>
-                <th scope="col">Year Published</th>
-                <th scope="col">Publisher</th>
-                <th scope="col">Page Count</th>
-                <th scope="col">MSRP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>The Da Vinci Code</td>
-                <td>Dan Brown</td>
-                <td>2003</td>
-                <td>Doubleday</td>
-                <td>489</td>
-                <td>$20</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>A Prisoner of Birth</td>
-                <td>Jeffrey Archer</td>
-                <td>2008</td>
-                <td>St Martin's Press</td>
-                <td>400</td>
-                <td>$15</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>And Then There Were None</td>
-                <td>Agatha Christie</td>
-                <td>1939</td>
-                <td>Collins Crime Club</td>
-                <td>272</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>The Hound of the Baskervilles</td>
-                <td>Sir Arthur Conan Doyle</td>
-                <td>1902</td>
-                <td>George Newnes Ltd</td>
-                <td>226</td>
-                <td>$20</td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="anotherApp" class="container">
+            <table class="table table-primary table-striped" id="tb">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Year Published</th>
+                  <th scope="col">Publisher</th>
+                  <th scope="col">Page Count</th>
+                  <th scope="col">MSRP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="book in books">
+                  <td>{{ book.sr_no }}</td>
+                  <td>{{ book.Title }}</td>
+                  <td>{{ book.Author }}</td>
+                  <td>{{ book.Year_Published }}</td>
+                  <td>{{ book.Publisher }}</td>
+                  <td>{{ book.page_count }}</td>
+                  <td>{{ prettyDollar(book.MSRP) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <form>
             <h3 id="h">Add New Book</h3>  
             <div class="mb-3">
@@ -122,4 +99,8 @@
         <script>
           new Tablesort(document.getElementById('tb'));
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    
+        <script src="js/book.js"></script>
 </html>

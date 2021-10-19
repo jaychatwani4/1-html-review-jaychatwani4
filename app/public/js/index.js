@@ -4,7 +4,7 @@ const SomeApp = {
       return {
         person: {},
         list: [5,6,7,8],
-        message: "Waiting ..."
+        message: "Waiting ...",
       }
     },
     computed: {
@@ -26,10 +26,23 @@ const SomeApp = {
             .catch( (error) => {
                 console.error(error);
             });
+        },
+        fetchBookData() {
+            console.log("Fetching book data for ", s);
+            fetch('/api/books/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.books = responseJson;
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
         }
     },
     created() {
         this.fetchUserData();
+        // this.fetchBookData();
     }
 
   }
