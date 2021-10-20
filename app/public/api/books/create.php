@@ -39,7 +39,7 @@ $stmt->execute([
   $_POST['Title'],
   $_POST['Author'],
   $_POST['Year_Published'],
-  $_POST['Published'],
+  $_POST['Publisher'],
   $_POST['page_count'],
   $_POST['MSRP']
 ]);
