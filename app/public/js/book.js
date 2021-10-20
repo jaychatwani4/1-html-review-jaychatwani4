@@ -53,7 +53,7 @@ const anotherApp = {
   
           fetch('api/offer/update.php', {
               method:'POST',
-              body: JSON.stringify(this.offerForm),
+              body: JSON.stringify(this.bookForm),
               headers: {
                 "Content-Type": "application/json; charset=utf-8"
               }
@@ -62,15 +62,15 @@ const anotherApp = {
             .then( json => {
               console.log("Returned from post:", json);
               // TODO: test a result was returned!
-              this.offers = json;
+              this.books = json;
               
               // reset the form
               this.handleResetEdit();
             });
         },
         postNewBook(evt) {
-            this.bookForm.sr_no = this.selectedBook.sr_no;        
-            console.log("Posting:", this.bookForm);
+            // this.bookForm.Title = this.selectedBook.Title;        
+            // console.log("Posting:", this.bookForm);
             // alert("Posting!");
     
             fetch('api/offer/create.php', {

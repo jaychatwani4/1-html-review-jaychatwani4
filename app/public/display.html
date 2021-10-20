@@ -61,27 +61,33 @@
             <h3 id="h">Add New Book</h3>  
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" id="title" >
+              <input type="text" v-model="bookForm.Title"
+              class="form-control" id="title" >
             </div>
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
-              <input type="text" id="autho">
+              <input type="text" v-model="bookForm.Author"
+              class="form-control" id="author">
             </div>
             <div class="mb-3">
               <label for="yearpublished" class="form-label">Year Published</label>
-              <input type="text" id="yearpublished">
+              <input type="text" v-model="bookForm.Year_Published"
+              class="form-control" id="yearpublished">
             </div>
             <div class="mb-3">
               <label for="publisher" class="form-label">Publisher</label>
-              <input type="text" id="publisher">
+              <input type="text" v-model="bookForm.Publisher"
+              class="form-control" id="publisher">
             </div>
             <div class="mb-3">
               <label for="pagecount" class="form-label">Page Count</label>
-              <input type="text" id="pagecount">
+              <input type="text" v-model="bookForm.page_count"
+              class="form-control" id="pagecount">
             </div>
             <div class="mb-3">
               <label for="msrp" class="form-label">MSRP</label>
-              <input type="text" id="msrp">
+              <input type="text" v-model="bookForm.MSRP"
+              class="form-control" id="msrp">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
