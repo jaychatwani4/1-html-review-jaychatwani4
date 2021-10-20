@@ -57,7 +57,7 @@
               </tbody>
             </table>
           </div>
-          <form>
+          <form v-on:submit.prevent="postBook">
             <h3 id="h">Add New Book</h3>  
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
